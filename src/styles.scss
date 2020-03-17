@@ -21,7 +21,7 @@ a {
   text-decoration: none;
 }
 
-.mainContainer {
-  display: grid;
-  grid-template-rows: 100px 1fr 100px;
+.wrapper {
+  border: 1px solid #333;
+  padding: 10px;
 }

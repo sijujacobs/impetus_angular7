@@ -1,0 +1,25 @@
+.wrapper {
+  button {
+    width: 75px;
+    height: 25px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    outline: none;
+    margin: 10px;
+    &:hover {
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.6);
+    }
+  }
+  .lightBgHeader {
+    background-color: #808080;
+    color: #000;
+  }
+  .darkBgHeader {
+    background-color: #333;
+    color: #fff;
+  }
+}

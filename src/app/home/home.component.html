@@ -1,1 +1,6 @@
-<p>home works!</p>
+<div class="wrapper">
+  <h3 [ngClass]="headerStyle ? 'darkBgHeader' : 'lightBgHeader'">
+    Home
+  </h3>
+  <button (click)="homeButtonClick()">Click</button>
+</div>
