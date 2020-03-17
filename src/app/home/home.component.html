@@ -1,6 +1,14 @@
 <div class="wrapper">
-  <h3 [ngClass]="headerStyle ? 'darkBgHeader' : 'lightBgHeader'">
-    Home
-  </h3>
-  <button (click)="homeButtonClick()">Click</button>
+  <div className="home">
+    <h3 [ngClass]="headerStyle ? 'darkBgHeader' : 'lightBgHeader'">
+      Angular 7
+    </h3>
+    <div className="homeDesc">
+      <p>A project built on Angular 7.</p>
+      <p>This project explores :</p>
+      <p>Angular 7, ngrx, dataservice, HttpClient</p>
+      <p>Store, Reducers, Actions, Effects</p>
+      <p>Component to Component Communication</p>
+    </div>
+  </div>
 </div>
