@@ -11,7 +11,11 @@ import { DocumentComponent } from "./document/document.component";
 import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
-import { UserComponent } from './user/user.component';
+import { UserComponent } from "./user/user.component";
+import { ProductComponent } from "./components/product/product.component";
+import { SubjectComponent } from "./components/subject/subject.component";
+
+import { productReducer } from "./reducers/product.reducer";
 
 @NgModule({
   declarations: [
@@ -20,9 +24,16 @@ import { UserComponent } from './user/user.component';
     FooterComponent,
     HomeComponent,
     DocumentComponent,
-    UserComponent
+    UserComponent,
+    ProductComponent,
+    SubjectComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    StoreModule.forRoot({ product: productReducer })
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

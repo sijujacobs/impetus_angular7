@@ -1,0 +1,31 @@
+<div class="productContainer">
+  <div class="formContainer">
+    <h3>New Product</h3>
+    <p>
+      <label for="productName">Name</label>
+      <input id="productName" />
+    </p>
+    <p>
+      <label for="productBrand">Brand</label>
+      <input id="productBrand" />
+    </p>
+    <p>
+      <label for="productUrl">URL</label>
+      <input id="productUrl" />
+    </p>
+    <button class="floatRight">Add Product</button>
+  </div>
+  <div class="productList" *ngIf="products">
+    <h3>Product List</h3>
+    <ul>
+      <li *ngFor="let product of products | async">
+        <p>
+          Name :
+          <a [href]="product.url" target="_blank">{{ product.name }}</a>
+        </p>
+        <p>Brand : {{ product.brand }}</p>
+        <button>X</button>
+      </li>
+    </ul>
+  </div>
+</div>
