@@ -1,4 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 
@@ -13,7 +14,9 @@ import { EffectsModule } from "@ngrx/effects";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { UserComponent } from "./user/user.component";
 import { ProductComponent } from "./components/product/product.component";
-import { SubjectComponent } from "./components/subject/subject.component";
+import { effects } from "./effects";
+
+import { reducers, metaReducers } from "./reducers";
 
 import { productReducer } from "./reducers/product.reducer";
 
@@ -25,14 +28,15 @@ import { productReducer } from "./reducers/product.reducer";
     HomeComponent,
     DocumentComponent,
     UserComponent,
-    ProductComponent,
-    SubjectComponent
+    ProductComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({ product: productReducer })
+    StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot(effects)
   ],
   providers: [],
   bootstrap: [AppComponent]

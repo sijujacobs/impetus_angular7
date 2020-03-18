@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <h3>New Users List {{ users }}</h3>
+  Testing
+  <div *ngFor="let u of users">
+    <p>{{ u.first_name }}</p>
+  </div>
+  <ul>
+    <li *ngFor="let user of users">
+      <img [src]="user.avatar" />
+      <p>{{ user.first_name }}{{ user.last_name }}</p>
+    </li>
+  </ul>
+</div>
