@@ -14,9 +14,7 @@ export class GetUsersBegin implements Action {
 export class GetUsersSuccess implements Action {
   readonly type = ActionTypes.GET_USERS_SUCCESS;
 
-  constructor(public payload: { data: any }) {
-    console.log("Action ::  payload : ", payload);
-  }
+  constructor(public payload: { data: any }) {}
 }
 
 export class GetUsersFailure implements Action {

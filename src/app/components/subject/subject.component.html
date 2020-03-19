@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <h3>
+    Users List
+  </h3>
+  <ul *ngIf="users">
+    <li *ngFor="let user of users" class="listItem">
+      <img [src]="user.avatar" />
+      <p>{{ user.first_name }}{{ user.last_name }}</p>
+    </li>
+  </ul>
+</div>

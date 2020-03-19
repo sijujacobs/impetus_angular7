@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -19,6 +19,7 @@ import { effects } from "./effects";
 import { reducers, metaReducers } from "./reducers";
 
 import { productReducer } from "./reducers/product.reducer";
+import { SubjectComponent } from './components/subject/subject.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { productReducer } from "./reducers/product.reducer";
     HomeComponent,
     DocumentComponent,
     UserComponent,
-    ProductComponent
+    ProductComponent,
+    SubjectComponent
   ],
   imports: [
     BrowserModule,
